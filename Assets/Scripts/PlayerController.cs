@@ -31,10 +31,12 @@ public class PlayerController : MonoBehaviour
         if (agent.remainingDistance > agent.stoppingDistance)
         {
             character.Move(agent.desiredVelocity, false, false);
+            Debug.Log("movendo");
         }
         else
         {
             character.Move(Vector3.zero, false, false);
+            Debug.Log("parado");
         }
     }
 }
